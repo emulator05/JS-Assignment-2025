@@ -1,0 +1,17 @@
+
+
+#board {
+    background-color: #e6a940;
+    border-top: 7px solid ;
+    border-bottom: 7px solid ;
+    border-color:#2dbccc ;
+}
+
+p{
+    align-items:center;
+    color: #2dbccc;
+    opacity: 0.25;
+    font-size: 50px;
+    text-align: center;
+
+}

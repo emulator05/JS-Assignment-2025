@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Chat</title>
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom right, #e6e9ec, #cdd5db);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f3f5;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Integrated controls into top-right of header */
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+#model-select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background: white;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+.chat-history {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-area {
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+#send-btn {
+    background-color: #5a62e4;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.chat-bubble {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 60%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', monospace;
+}
+    </style>
+    
+</head>
+
+<body>
+    <div class="chat-container">
+        <h2>ChadGuru</h2>
+
+
+        <div id="chat-history" class="chat-history"></div>
+
+        <div class="input-area">
+    <div class="controls">
+        <select id="model-select">
+            <option value="Cypher_Alpha">Cypher_Alpha</option>
+            <option value="mistral">Mistral</option>
+            <option value="deepseek">Deepseek</option>
+        </select>
+    </div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button id="send-btn">Send</button>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
